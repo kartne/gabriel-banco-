@@ -25,25 +25,26 @@ SPEED = 1 #pixels por movimento
 
 #Função para centralizar a imagen conforme o tamanho da tela
 def centralize_image():
-global ing_rect, WIDTH, HEIGHT
-img_rect.center = (WIDTH // 2, HEIGHT // 2) # Centraliza a imagem no centro da tela
-Variáveis para controle de redimensionamento
+  global ing_rect, WIDTH, HEIGHT
+  img_rect.center = (WIDTH // 2, HEIGHT // 2) # Centraliza a imagem no centro da tela
+  
+#Variáveis para controle de redimensionamento
 last width, last_height = WIDTH, HEIGHT
-# Limite de novimento para que o personagem não saia da tela
-def limit_movement():
-global ing rect, WIDTH, HEIGHT
-#Limita a posição da imagem para não sair da tela
-if img rect.left < 0:
-ing_rect.left-
-if img rect.right > WIDTH:
-ing rect.right = WIDTH
-if img rect.top < 0:
-ing rect.top
-if img_rect.bottom> HEIGHT:
-ing rect.bottom = HEIGHT
-Loop principal do jogo
-running = True
-while running:
-for event in pygame.event.get():
-if event.type pygame.QUIT:
-running = False
+  # Limite de novimento para que o personagem não saia da tela
+  def limit_movement():
+  global ing rect, WIDTH, HEIGHT
+  #Limita a posição da imagem para não sair da tela
+  if img_rect.left < 0:
+  img_rect.left-
+  if img_rect.right > WIDTH:
+  ing rect.right = WIDTH
+  if img_rect.top < 0:
+  img rect.top
+  if img_rect.bottom> HEIGHT:
+  img rect.bottom = HEIGHT
+#Loop principal do jogo
+  running = True
+  while running:
+  for event in pygame.event.get():
+    if event.type pygame.QUIT:
+    running = False
